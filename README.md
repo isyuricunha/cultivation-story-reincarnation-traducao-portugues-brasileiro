@@ -1,6 +1,6 @@
-[![Arte oficial de 轮回修仙传](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3458620/4af3fb95010dd60f89242eaeffc12a7df1709797/header.jpg)](https://store.steampowered.com/app/3458620/)
+[![Arte oficial de Reincarnation of a Cultivator (轮回修仙传)](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3458620/4af3fb95010dd60f89242eaeffc12a7df1709797/header.jpg)](https://store.steampowered.com/app/3458620/)
 
-# 轮回修仙传 — Tradução para Português Brasileiro
+# Reincarnation of a Cultivator (轮回修仙传) — Tradução para Português Brasileiro
 
 *A cada vida, uma nova chance de desafiar o destino.*
 
@@ -8,7 +8,7 @@
 
 ## Uma vida de cada vez
 
-Em **轮回修仙传**, você começa uma nova vida, escolhe como cultivar seus poderes e decide o que fazer antes do próximo confronto. Talentos, raízes espirituais e a ordem das técnicas mudam suas chances de sobreviver. Os encontros podem render aliados, rivais e finais diferentes. Quando uma vida termina, a próxima permite tentar outro caminho.
+Em **Reincarnation of a Cultivator (轮回修仙传)**, você começa uma nova vida, escolhe como cultivar seus poderes e decide o que fazer antes do próximo confronto. Talentos, raízes espirituais e a ordem das técnicas mudam suas chances de sobreviver. Os encontros podem render aliados, rivais e finais diferentes. Quando uma vida termina, a próxima permite tentar outro caminho.
 
 O primeiro escopo da tradução comunitária cobre as tabelas de diálogos, eventos, itens, habilidades e outros textos do jogo. A interface, as imagens com texto e a cobertura de acentos em todas as fontes ainda exigem trabalho próprio. O projeto parte do chinês simplificado, idioma original da edição Steam.
 
