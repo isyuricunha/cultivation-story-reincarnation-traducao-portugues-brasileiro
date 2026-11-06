@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "game": "轮回修仙传",
+  "steam_appid": 3458620,
+  "repository": "isyuricunha/cultivation-story-reincarnation-traducao-portugues-brasileiro",
+  "batch_size": 500,
+  "retention": {
+    "bytes": 134217728,
+    "count": 10
+  },
+  "redistribution": {
+    "authorized": true,
+    "reason": "Package contains project plugin and PT-BR delta only, no native resources."
+  },
+  "game_candidates": [
+    "D:/Games/Reincarnation.of.a.Cultivator.Build.21565338"
+  ]
+}

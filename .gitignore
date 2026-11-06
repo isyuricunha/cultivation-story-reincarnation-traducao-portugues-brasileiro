@@ -1,0 +1,8 @@
+.local/
+__pycache__/
+translation-work/.state/
+EN/
+PTBR.zip
+translation-work/.release/
+translation-work/reports/
+translation-work/translations/

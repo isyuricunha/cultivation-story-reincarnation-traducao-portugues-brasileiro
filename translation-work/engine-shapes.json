@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "source_language": "zh-Hans",
+  "build": "21565338",
+  "game_version": "1.2.1.18.1",
+  "tables": {
+    "AchievementInfo": [
+      "Name",
+      "Desc"
+    ],
+    "AlchemyInfo": [
+      "Name"
+    ],
+    "AttributeInfo": [
+      "Name"
+    ],
+    "BirthInfo": [
+      "Name",
+      "Desc"
+    ],
+    "BuffBaseInfo": [
+      "Name",
+      "Desc"
+    ],
+    "DialogueInfo": [
+      "Chinese"
+    ],
+    "EndingInfo": [
+      "Name",
+      "Desc"
+    ],
+    "EnemyInfo": [
+      "Name"
+    ],
+    "EventInfo": [
+      "Name",
+      "Desc",
+      "Location"
+    ],
+    "ItemInfo": [
+      "Name",
+      "Desc"
+    ],
+    "RealmInfo": [
+      "Name"
+    ],
+    "RefineInfo": [
+      "Name"
+    ],
+    "SceneInfo": [
+      "Name"
+    ],
+    "ShopInfo": [
+      "Name"
+    ],
+    "SkillInfo": [
+      "Name",
+      "Desc"
+    ],
+    "TalentInfo": [
+      "Desc",
+      "Tips"
+    ]
+  },
+  "excluded": [
+    "BlockWords",
+    "BlockWordsInfo",
+    "Sheet1",
+    "NameInfo",
+    "SpellMaking",
+    "SpellMakingInfo",
+    "ExerciseInfo",
+    "Planting",
+    "PlantingInfo",
+    "GlobalInfo",
+    "TimelineInfo"
+  ]
+}
