@@ -1,46 +1,52 @@
 [![Arte oficial de Reincarnation of a Cultivator (轮回修仙传)](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3458620/4af3fb95010dd60f89242eaeffc12a7df1709797/header.jpg)](https://store.steampowered.com/app/3458620/)
 
-# Reincarnation of a Cultivator (轮回修仙传) — Tradução para Português Brasileiro
+# Reincarnation of a Cultivator (轮回修仙传)
 
-*A cada vida, uma nova chance de desafiar o destino.*
+**Tradução comunitária para português brasileiro**
 
-[Steam](https://store.steampowered.com/app/3458620/) · [Downloads PT-BR](https://github.com/isyuricunha/cultivation-story-reincarnation-traducao-portugues-brasileiro/releases) · [Discord Vai Brasil](https://discord.gg/uFEwSMwUYb)
+[Steam](https://store.steampowered.com/app/3458620/) · [Releases](https://github.com/isyuricunha/cultivation-story-reincarnation-traducao-portugues-brasileiro/releases) · [Discord Vai Brasil](https://discord.gg/uFEwSMwUYb)
 
-## Uma vida de cada vez
+## Sobre o jogo
 
-Em **Reincarnation of a Cultivator (轮回修仙传)**, você começa uma nova vida, escolhe como cultivar seus poderes e decide o que fazer antes do próximo confronto. Talentos, raízes espirituais e a ordem das técnicas mudam suas chances de sobreviver. Os encontros podem render aliados, rivais e finais diferentes. Quando uma vida termina, a próxima permite tentar outro caminho.
+Cada reencarnação dá ao seu cultivador outra chance de desafiar o destino. Entre um confronto e outro, você decide se vale mais treinar, preparar pílulas ou sair em expedição. Talentos, raízes espirituais e a ordem das técnicas mudam suas opções em combate. As escolhas de cada vida abrem caminhos para novos aliados, rivais e finais.
 
-O primeiro escopo da tradução comunitária cobre as tabelas de diálogos, eventos, itens, habilidades e outros textos do jogo. A interface, as imagens com texto e a cobertura de acentos em todas as fontes ainda exigem trabalho próprio. O projeto parte do chinês simplificado, idioma original da edição Steam.
+## O que a tradução cobre
 
-## 📦 Baixar
+O projeto traduz diretamente do chinês simplificado. O escopo atual inclui **diálogos, eventos, itens, habilidades, talentos e finais**, além de outros textos das tabelas do jogo. Os menus gráficos e as imagens com texto têm cobertura separada. A exibição de acentos em todas as telas ainda precisa de validação no jogo.
 
-Quando houver um pacote disponível na página de [Releases](https://github.com/isyuricunha/cultivation-story-reincarnation-traducao-portugues-brasileiro/releases), baixe o **PTBR.zip** da versão compatível com seu jogo. Os links *Source code* são os arquivos do repositório.
+## Download
+
+Quando houver uma versão disponível, abra [Releases](https://github.com/isyuricunha/cultivation-story-reincarnation-traducao-portugues-brasileiro/releases), confira a compatibilidade indicada e baixe **PTBR.zip** em **Assets**. Esse é o pacote de instalação. Os arquivos **Source code** são destinados a quem quer consultar ou trabalhar no projeto.
 
 ## Instalação
 
-1. Feche o jogo. Na Steam, abra **Gerenciar → Explorar arquivos locais** e confirme que a pasta contém `Re-xiuxian Legend.exe`.
-2. Use uma instalação Windows com BepInEx 5 para Unity Mono já configurado. Guarde uma cópia da pasta `BepInEx/plugins/CultivationPtBr` se estiver atualizando a tradução.
-3. Extraia o conteúdo de **PTBR.zip** ao lado do executável. A DLL e o catálogo PT-BR ficam em `BepInEx/plugins/CultivationPtBr/`.
-4. Abra o jogo. As tabelas compatíveis são traduzidas no carregamento. Se precisar desinstalar, feche o jogo e remova a pasta `CultivationPtBr` de `BepInEx/plugins`.
+Você precisa do jogo para **Windows** e do **BepInEx 5 para Unity Mono** configurado na instalação.
 
-## Compatibilidade e ajuda
+1. Feche o jogo. Na Steam, abra **Gerenciar → Explorar arquivos locais** para localizar a pasta de `Re-xiuxian Legend.exe`.
+2. Se estiver atualizando a tradução, faça uma cópia de `BepInEx/plugins/CultivationPtBr/` antes de substituir os arquivos.
+3. Extraia **PTBR.zip** na pasta do executável. Ao final, `CultivationPtBr.dll` e `tables.ptbr.json` devem estar em `BepInEx/plugins/CultivationPtBr/`.
+4. Abra o jogo. O plugin aplica os textos das tabelas compatíveis durante o carregamento.
 
-A base analisada é a versão **1.2.1.18.1**, build **21565338**. O mod verifica as tabelas antes de aplicar os textos. Uma atualização do jogo pode mudar essas tabelas. A integração com outros mods, a demo e o Steam Deck ficam fora da validação atual.
+Para desinstalar, feche o jogo e remova apenas `BepInEx/plugins/CultivationPtBr/`. Se quiser voltar a uma versão anterior da tradução, restaure a cópia dessa pasta.
 
-Para relatar um problema, informe a versão do jogo, os mods ativos e a tela em que o problema apareceu. A comunidade [Vai Brasil](https://discord.gg/uFEwSMwUYb) reúne dúvidas e sugestões. Conheça também o [portal de traduções](https://traducao.yuricunha.com/).
+## Compatibilidade e suporte
 
-Se quiser apoiar o projeto, o Pix voluntário é `pix@yuricunha.com`.
+A versão **1.2.1.18.1**, build **21565338**, foi a base usada na preparação do projeto. O plugin confere os dados originais de cada tabela antes de aplicar a tradução. Se uma atualização mudar esses dados, a tabela afetada pode aparecer em chinês até que haja um pacote compatível. A demo, o Steam Deck e a combinação com outros mods ainda precisam de testes.
 
-## Créditos
+Se encontrar um erro de tradução ou instalação, informe a **versão do jogo**, a **versão do pacote** e a **tela ou o evento** em que ocorreu. Uma captura ajuda a localizar o problema. Se estiver usando outros mods, liste quais estão ativos. [Discord Vai Brasil](https://discord.gg/uFEwSMwUYb) · [Issues no GitHub](https://github.com/isyuricunha/cultivation-story-reincarnation-traducao-portugues-brasileiro/issues)
 
-- Coordenação e manutenção da tradução — Yuri Cunha
-- Jogo original — Collider Studio
-- Publicação do jogo — OKJOY
+## Contribuições
 
-## 📜 Licença
+Sugestões de termos, correções e relatos com contexto ajudam na revisão. Para enviar alterações de texto, consulte as regras de contribuição e o guia da toolkit. [Como contribuir](./CONTRIBUTING.md) · [Guia técnico](./translation-work/README.md)
 
-A [CC BY-NC-SA 4.0](./LICENSE) cobre o material original do projeto que seus autores podem licenciar. O reaproveitamento exige crédito e indicação de alterações, tem finalidade não comercial e requer que adaptações usem a mesma licença ou uma licença compatível autorizada. Arte, marcas, código e textos do jogo permanecem com seus titulares.
+Conheça também o [portal de traduções](https://traducao.yuricunha.com/). Quem quiser apoiar o projeto pode usar o Pix voluntário `pix@yuricunha.com`.
 
-A [permissão para integração oficial](./GAME-DEVELOPER-PERMISSION.md) permite ao titular e à editora autorizada incorporar e distribuir comercialmente o material coberto, com crédito. As regras de [contribuição](./CONTRIBUTING.md) explicam como registrar a autorização expressa de cada voluntário.
+## Créditos e licença
 
-*Que a próxima vida abra outro caminho.*
+- **Coordenação e manutenção da tradução** — Yuri Cunha
+- **Desenvolvimento do jogo** — Collider Studio
+- **Publicação do jogo** — OKJOY
+
+O material original do projeto que seus autores podem licenciar segue a **CC BY-NC-SA 4.0**. O reaproveitamento exige crédito, indicação das alterações e uso não comercial. Adaptações devem ser distribuídas sob a mesma licença ou uma licença compatível autorizada. Os direitos sobre o jogo, seus textos, suas marcas e sua arte pertencem aos respectivos titulares. [Licença completa](./LICENSE)
+
+A autorização adicional permite que o titular do jogo e a editora autorizada incorporem e distribuam comercialmente o material coberto, com crédito. [Permissão para integração oficial](./GAME-DEVELOPER-PERMISSION.md)
