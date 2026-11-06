@@ -12,7 +12,7 @@ python3 translation-work/toolkit.py doctor
 
 A estação de tradução é Ubuntu Server 24.04 ARM64 com Python 3.10+. O preflight é somente leitura, verifica a arquitetura, a cadeia de hashes LF/binários, o catálogo e a aplicação de um delta a um fixture JSON válido. A autoria e o build do delta usam a biblioteca padrão. O plugin Windows já vem compilado e tem hash verificado. O preflight não carrega o runtime do jogo. **Windows AMD64 foi usado para desenvolvimento. A execução em Ubuntu ARM64 aguarda este preflight.** Se falhar, envie o erro antes de começar a traduzir.
 
-O checkout público inclui a toolkit. Importe a fonte local com `update-sources --game-root CAMINHO` ou receba o diretório `translation-work/translations/` por um canal autorizado. Rode o preflight novamente para validar o catálogo. Depois, leia o briefing, estabeleça as diretrizes e o glossário e use `resume` para identificar o próximo ID. Edite apenas `PTBR` em `translations/batch-*.jsonl`. Campo vazio representa trabalho pendente. Preserve marcadores como `{0}` e `{1}`, tags e referências. O contexto de eventos não comprova o locutor.
+O checkout inclui os lotes e o catálogo. Confirme que o preflight retorna `catalog: validated`. Depois, leia o briefing, estabeleça as diretrizes e o glossário e use `resume` para identificar o próximo ID. Edite apenas `PTBR` em `translations/batch-*.jsonl`. Campo vazio representa trabalho pendente. Preserve marcadores como `{0}` e `{1}`, tags e referências. O contexto de eventos não comprova o locutor.
 
 ## Comandos
 
@@ -41,7 +41,7 @@ Apenas a importação do UnityFS precisa de UnityPy. Em ambiente virtual local, 
 
 O catálogo aceito em `translations/source-catalog.json` permite comparar sem depender da cópia local anterior. Mesmos ID, texto e contexto preservam PT-BR. Edições retornam à fila de revisão. Registros retirados aparecem no relatório local, junto com textos e traduções anteriores. Mudança apenas na posição é classificada separadamente. Compare relatórios antes de atualizar Git. Histórico durável depende de manter a versão anterior em Git ou num ambiente de trabalho autorizado.
 
-`EN/` fica ignorada para evitar incluir acidentalmente o bundle do jogo. O catálogo e os lotes contêm trechos do jogo em chinês. Confirme com os titulares a autorização para distribuir esse corpus antes de publicar os arquivos de trabalho em repositório público. O ZIP de instalação inclui somente o plugin do projeto e o delta PT-BR.
+`EN/` fica ignorada para evitar incluir acidentalmente o bundle do jogo. O catálogo e os lotes contêm trechos do jogo em chinês. O ZIP de instalação inclui somente o plugin do projeto e o delta PT-BR.
 
 O journal em `translation-work/.state/` protege operações de escrita. Uma aplicação pequena grava somente lotes alterados e seus backups. A retenção padrão é 10 checkpoints e 128 MiB. A promoção exige espaço adicional temporário, verificado antes de começar. Depois de interrupção, execute `recover`, revise e repita a operação. Use `gc --dry-run` para consultar a limpeza. Guarde em Git o histórico necessário antes de podar checkpoints.
 
