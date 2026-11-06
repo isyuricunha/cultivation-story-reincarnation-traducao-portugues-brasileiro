@@ -24,11 +24,14 @@ Documento vivo: decisões novas entram aqui e no glossário conforme aparecem. E
 ## Convenções de texto
 
 - Tratamento: "você" em toda a interface e narrativa.
+- Protagonista: o original não fixa gênero, mas o talento 直男系统 (Sistema Hétero) e as rotas o descrevem como homem; onde a gramática exige, usa-se o masculino. Frases que dispensam marca de gênero ficam neutras. Revisar se surgir evidência contrária (seleção de gênero do jogo).
 - Caixa de frase em títulos e rótulos (só inicial maiúscula e nomes próprios), sem copiar padrões de caixa do chinês.
 - Linhas de delta de atributos no padrão "+10 de Compreensão, -20 de Longevidade.", preservando o ponto final quando o original tem.
 - Reino de cultivo (境界) = reino; estágio (期) = estágio; patentes de alquimia e forja usam "nível".
+- Graus de qualidade (次品/下品/中品/上品/极品/仙品) entram como sufixo concordado: "Núcleo Demoníaco Supremo", "Pílula de Lavar a Medula Baixa".
 - Ano do jogo: "ano N da Era Imortal".
 - Nominalizações de estatística seguem o glossário; mesma mecânica = mesmo termo em todo o catálogo.
+- Travessões do original (——) nunca entram no texto PT: converter em dois-pontos, vírgula ou ponto.
 
 ## Processo
 

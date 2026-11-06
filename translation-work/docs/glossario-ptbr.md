@@ -153,4 +153,31 @@ Formato: termo chinês, escolha em PT-BR, contexto que justifica a escolha, stat
 ## Notas de origem
 
 - 纵然的后果 (AchievementInfo/222): 纵然 provável grafe de 放纵 (indulgência); traduzido como "As Consequências da Indulgência". Revisar se o contexto da história paralela indicar outro sentido.
-- 红颜消逝 (AchievementInfo/8): 红颜 pode referir a personagem 洛红颜 ou "beleza" genérica; escolhido "Beleza Desvanecida", que funciona nos dois casos. Revisar com o contexto da história paralela.
+- 红颜消逝 (AchievementInfo/8): confirmado no arco do fim 401 que 红颜 é a personagem 洛红颜 (Luo Hongyan), a líder da Seita da Espada Espiritual; "Beleza Desvanecida" mantém-se, pois funciona como eufemismo da morte dela.
+- 索要灵石: mesma string fonte em dois eventos com sentidos distintos (presente de aniversário, EventInfo/8063123 = "Pedir Pedras Espirituais"; aposta de Go, EventInfo/8088313 = "Cobrar as Pedras"). Divergência intencional por contexto.
+- 远古剑冢 (SceneInfo/9) e 封天剑冢 (EventInfo/120000, 120001) descrevem o mesmo lugar com grafias diferentes na fonte; mantiveram-se "Túmulo das Espadas" e "Túmulo das Espadas Sela-Céu", espelhando a diferença do original.
+- 赔礼道歉 unificado em "Pedir perdão"; o custo da indenização fica na descrição do evento, não no rótulo.
+- Erros de grafia da fonte traduzidos pelo sentido provável, registrados aqui e nunca marcados dentro da string: 藤曼 (por 藤蔓, cipós), 按捺不足 (por 按捺不住), 陪伴度这是 (por 陪伴，这是), 更加块 (por 更快), 击伤 (por 击中, contexto de golpe).
+
+## Grades, materiais e equipamento
+
+- 次品 / 下品 / 中品 / 上品 / 极品 / 仙品 → Defeituoso(a) / Baixo(a) / Médio(a) / Alto(a) / Supremo(a) / Imortal: sufixo concordado com o substantivo (Núcleo Demoníaco Supremo, Pílula de Lavar a Medula Baixa). Aprovado.
+- 玄铁 → ferro negro: material das armas básicas; nomes por forma (Espada de Ferro Negro, Sabre/Lança/Bastão Comprido de Ferro Negro). Aprovado.
+- 背带裤 → macacão de alças: a peça do homem da Porta Kun e o equipamento de Refinamento do Corpo. Aprovado.
+- 内丹 → núcleo demoníaco (de fera); 妖丹 → núcleo demoníaco (como item ganho de chefes). Aprovado.
+- 金灵补天丹 série → Pílula de Complemento do Metal/da Madeira/da Água/do Fogo/da Terra: 补天 = completar o céu, sentido de reforço elemental. Aprovado.
+- 忘尘丹 → Pílula do Esquecimento; 淬魄丹 → Pílula de Têmpera da Alma; 聚气丹 → Pílula de Concentração de Qi; 会心丹 → Pílula do Golpe Certeiro; 金刚丹 → Pílula Adamantina; 乌金丹 → Pílula do Ouro Negro. Aprovado.
+- 灵草 → Erva Espiritual (com graus Comum/Média/Alta/Suprema/Imortal); 龙血花 → Flor de Sangue de Dragão; 剑意兰 → Orquídea da Vontade da Espada; 急行藤 → Hera Veloz. Aprovado.
+- Talismãs: 符 → Talismã, com efeitos mapeados aos estados de combate (Paralisia, Queimadura, Silêncio, Fraqueza, Lentidão, Ofuscamento, Envenenamento, Armadura Rompida, Espinhos, Congelamento). Aprovado.
+- 不死之泉 → a fonte da vida sem fim (91340100); 水中楼阁 → pavilhão sob a água; 镜泊 → lago-espelho. Aprovado.
+- 呼风唤雨咒 → Encantamento de Chamar o Vento e a Chuva; 水漫金山咒 → Encantamento da Água Tomando a Montanha de Ouro (alusão à lenda de Bai Suzhen). Aprovado.
+- 南明离火印 → Selo do Fogo de Li do Sul Iluminado; 离 = trigrama do fogo. Aprovado.
+- 地藏决 → Fórmula do Guardião da Terra (alusão ao bodhisattva Kṣitigarbha, funcional para o jogador). Aprovado.
+- 噬魂幡 → Estandarte Devorador de Almas; 天火摄魂旗 → Estandarte do Fogo Celeste que Agarra a Alma; 幽冥噬灵塔 → Torre do Além que Devora Espíritos. Aprovado.
+- 黄泉 → Fonte Amarela: portal do mundo dos mortos, usado nos enigmas do sonho. Aprovado.
+- 神念 / 神识 → Percepção Espiritual; 灵台 → mente espiritual; 识海 → mar da consciência. Aprovado.
+- 走火入魔 → desgoverno de qi. Aprovado.
+- 中州 → Terras Centrais; 东瀛岛 → Ilhota do Oriente; 黄土镇 → Cidade do Loess; 无界岛 → Ilha Sem Fronteiras; 千宿山 → Montanha das Mil Pousadas; 云岚宗 → Seita Yunlan; 落云宗 → Seita da Nuvem Descendente; 灵兽宗 → Seita das Feras Espirituais; 慈母观 → Templo da Mãe Amorosa; 搬山宗 → Seita das Montanhas que Move. Aprovado.
+- 白永安 → Bai Yong'an; 王麻子 → Wang Mazi; 圆圆 → Yuanyuan; 阿牛 → Aniu; 小白 → Xiao Bai; 风溪 → Feng Xi; 玄都皇朝 → Império Xuandu; 坤门 → Porta Kun; 遮天之体 → Corpo Encobridor do Céu. Aprovado.
+- 双修 → cultivo duplo; 三修 → cultivo a três (trio, rota 1000). Aprovado.
+- 次元商人 → mercador dimensional; 左轮枪 → Revólver; 电击棍 → Bastão Elétrico; 火箭筒 → Lança-Foguetes; 农夫三拳 → Os Três Socos do Lavrador. Aprovado.
