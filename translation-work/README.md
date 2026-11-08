@@ -52,3 +52,7 @@ O build exige preenchimento de todos os registros do escopo e valida a estrutura
 No Windows, rode `python -B -m unittest discover -s translation-work/tests -v` e `python translation-work/toolkit.py doctor --target host`. Para testar o parser compilado no Windows sem abrir o jogo, rode `pwsh -File translation-work/tests/smoke-runtime.ps1 -GameRoot "CAMINHO"` após importar as tabelas. O cliente de Releases tem testes com servidor HTTP local. A execução real no GitHub e a execução do novo plugin com o catálogo completo no jogo ainda precisam de validação.
 
 A licença pública [CC BY-NC-SA 4.0](../LICENSE) cobre o material autorizado. A [permissão comercial para integração oficial](../GAME-DEVELOPER-PERMISSION.md) e a [autorização de contribuições](../CONTRIBUTING.md) são independentes do ZIP.
+
+## Interface
+
+Depois dos lotes das tabelas, complete o campo `PTBR` de `ui/catalog.jsonl`. O comando `status` mostra `ui_pending` e `resume` aponta o próximo ID de interface quando as tabelas estão completas. O build exige ambos os catálogos preenchidos. Veja o [inventário das telas observadas](docs/interface-v1.0.0.md) para os textos, ajustes de layout e sprites pendentes.

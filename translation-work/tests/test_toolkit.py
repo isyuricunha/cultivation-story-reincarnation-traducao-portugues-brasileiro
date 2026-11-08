@@ -25,6 +25,12 @@ class Sandbox(unittest.TestCase):
             path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, path)
         receipt = json.loads((ROOT / WORK / 'toolchain.json').read_bytes())
+        receipt['files'].pop(WORK + 'ui/layout.json', None)
+        (self.root / WORK / 'toolchain.json').write_bytes(encoded(receipt))
+        support = self.root / WORK / 'runtime-support.json'
+        runtime = json.loads(support.read_bytes())
+        runtime['toolchain']['sha256'] = sha(encoded(receipt))
+        support.write_bytes(encoded(runtime))
         for relative in receipt['files']:
             path = self.root / relative
             path.parent.mkdir(parents=True, exist_ok=True)

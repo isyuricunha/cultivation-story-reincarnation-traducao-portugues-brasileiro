@@ -2,13 +2,15 @@
   "game_version": "1.2.1.18.1",
   "generation": "799abcbba3a5c3359e9e2a98b5c33b9d005f7a93d69d6f3f4867d9a3dca87fc3",
   "output": {
-    "BepInEx/plugins/CultivationPtBr/CultivationPtBr.dll": "3f51c9b1c81a5d8f292b99285d47afd97cd88bb882a0ada879365495049c4cd9",
-    "BepInEx/plugins/CultivationPtBr/tables.ptbr.json": "e2e524c9faff3a9f45715aaa96bb7ec5586201dcacd5fdfb9939885c67c7684b"
+    "BepInEx/plugins/CultivationPtBr/CultivationPtBr.dll": "331a0c5cb1afbea5c83f860f7f94f8227f828609b62b74af31ba92c5779411b2",
+    "BepInEx/plugins/CultivationPtBr/tables.ptbr.json": "44eaadae82717fc8cdb1ed527c16eb9b45f419d3d87597c23a483df2e9f60529"
   },
   "record_count": 5695,
   "schema": 1,
   "source_sha256": "5c8514ae016c183ef44faac3db76d4a2d7d1e81843bac129bebe047c3efa2e28",
   "target_language": "Português (Brasil)",
-  "toolchain_sha256": "d5ecc8becfb9869188bb9e21c6487fcc21857f6b2149cc9232f7847cdb2e34fa",
-  "translation_fingerprint": "6e137730168c283f8da69dbb3c4ec937a7237858837cd95318fd62275d7f0a1e"
+  "toolchain_sha256": "782f7c22569e1c52f92c481d78bd66b1a3e076353a2032b3620ef01a3c2bd5cc",
+  "translation_fingerprint": "6684feebab2ca2229f6264787a1deeda215a45051cbe6c27610a3df04d255d81",
+  "ui_record_count": 32,
+  "ui_sha256": "ab97038fe23bf6aef80c86eb90ca75011b036e1adc542067be621badb4f449fb"
 }

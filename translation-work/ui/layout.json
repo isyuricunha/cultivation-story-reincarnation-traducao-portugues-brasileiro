@@ -1,0 +1,56 @@
+{
+  "rules": [
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "BSTalentPanel/BackGround/Group/BSTalentItem (1)/tmptxt_TalentName"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "BSTalentPanel/BackGround/Group/BSTalentItem (2)/tmptxt_TalentName"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "BSTalentPanel/BackGround/Group/BSTalentItem/tmptxt_TalentName"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "GamePropertyPanel/PropertyBG/BSTalentItemGroup/BSTalentItem (1)/tmptxt_TalentName"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "GamePropertyPanel/PropertyBG/BSTalentItemGroup/BSTalentItem (2)/tmptxt_TalentName"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "GamePropertyPanel/PropertyBG/BSTalentItemGroup/BSTalentItem/tmptxt_TalentName"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "GamePropertyPanel/PropertyBG/炼丹炼器/炼丹入门/tmptxt_AlchemyTitle"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "GamePropertyPanel/PropertyBG/炼丹炼器/炼器入门/tmptxt_RefineTitle"
+    },
+    {
+      "component": "tmp",
+      "mode": "fit",
+      "path": "GamePropertyPanel/PropertyBG/角色属性/RealmLevelBG/tmptxt_RealmLevel"
+    },
+    {
+      "ZH_CN": "年",
+      "component": "tmp",
+      "mode": "hide",
+      "path": "GamePropertyPanel/年份/TextContent/年"
+    }
+  ],
+  "source_sha256": "046a2cc4bc86f200c5be4b704760e230fcf916671cc5a8b893ec4ad86e19d737"
+}

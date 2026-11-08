@@ -311,28 +311,63 @@ class Project:
         tx = self.store.commit({TRANS + n: lines(batches[n]) for n in changed}, expected)
         return {'applied': applied, 'rejected': rejected, 'transaction': tx}
 
+    def ui_records(self):
+        path = safe(self.root, WORK + 'ui/catalog.jsonl')
+        layout = safe(self.root, WORK + 'ui/layout.json')
+        if not layout.exists() and not path.exists():
+            return []
+        rows = [json.loads(line) for line in path.read_text('utf-8').splitlines()]
+        require(rows and len({r['id'] for r in rows}) == len(rows), 'Invalid UI catalog IDs')
+        source = [{key: value for key, value in row.items() if key != 'PTBR'} for row in rows]
+        require(sha(encoded(source)) == load(layout)['source_sha256'], 'UI source metadata changed')
+        require(len({(r['path'], r['component'], r['ZH_CN']) for r in rows}) == len(rows),
+                'Ambiguous UI translation rule')
+        for row in rows:
+            require(row['mode'] in ('exact', 'format') and row['component'] in ('tmp', 'legacy')
+                    and '/' in row['path'], 'Invalid UI rule: ' + row['id'])
+            require(isinstance(row['PTBR'], str), 'Invalid UI translation: ' + row['id'])
+            if row['PTBR']:
+                require(bool(row['PTBR'].strip()), 'Blank UI translation: ' + row['id'])
+                validate_text(row['ZH_CN'], row['PTBR'])
+        return rows
+
+    def output_delta(self, records, hashes, ui):
+        delta = make_delta(records.values(), hashes)
+        if ui:
+            require(all(row['PTBR'] for row in ui), 'Incomplete interface translations')
+            delta['ui'] = ui
+            delta['ui_layout'] = load(safe(self.root, WORK + 'ui/layout.json'))['rules']
+        return delta
+
     def status(self):
         m, records, batches, _ = self.workspace()
+        ui = self.ui_records()
+        ui_pending = sum(not row['PTBR'] for row in ui)
         done = sum(bool(r['PTBR']) for r in records.values())
         build = self.root / WORK / 'build-manifest.json'
         stale = (not build.exists() or load(build).get('translation_fingerprint') != self.fingerprint(records)
+                 or load(build).get('ui_sha256', sha(encoded([]))) != sha(encoded(ui))
                  or load(build).get('generation') != m['generation']
                  or load(build).get('toolchain_sha256') != sha(canonical((self.root / WORK / 'toolchain.json').read_bytes())))
         first = next((r for n in sorted(batches) for r in batches[n] if not r['PTBR']), None)
+        first_ui = next((r['id'] for r in ui if not r['PTBR']), None)
         report = self.root / WORK / 'reports/sync-latest.json'
         return {'generation': m['generation'], 'total': len(records), 'completed': done,
                 'pending': len(records) - done, 'batches': len(batches), 'output_stale': stale,
-                'next_id': first['id'] if first else None,
+                'next_id': first['id'] if first else first_ui,
+                'ui_total': len(ui), 'ui_pending': ui_pending,
                 'latest_diff_matches_generation': report.exists() and load(report)['generation'] == m['generation'],
                 'storage': self.store.stats()}
 
     def build(self):
-        expected = self.expectations([WORK + 'build-manifest.json', 'PTBR/' + PLUGIN, 'PTBR/' + DELTA])
+        expected = self.expectations([WORK + 'build-manifest.json', 'PTBR/' + PLUGIN, 'PTBR/' + DELTA,
+                                      WORK + 'ui/catalog.jsonl', WORK + 'ui/layout.json'])
         m, records, _, _ = self.workspace()
         pending = sum(not r['PTBR'] for r in records.values())
         require(not pending, f'Build blocked: {pending} entries pending')
         hashes = {name: m['source_hashes']['TextAsset/' + name + '.json'] for name in self.shape['tables']}
-        delta = make_delta(records.values(), hashes)
+        ui = self.ui_records()
+        delta = self.output_delta(records, hashes, ui)
         for name, spec in delta['tables'].items():
             if (self.root / 'EN').exists():
                 raw = safe(self.root, 'EN/TextAsset/' + name + '.json').read_bytes()
@@ -347,6 +382,7 @@ class Project:
                 require(not p.is_file() or rel in outputs, 'Unexpected PTBR file: ' + rel)
         receipt = {'schema': 1, 'generation': m['generation'], 'source_sha256': m['source_sha256'],
                    'translation_fingerprint': self.fingerprint(records), 'record_count': len(records),
+                   'ui_record_count': len(ui), 'ui_sha256': sha(encoded(ui)),
                    'output': {rel: sha(raw) for rel, raw in outputs.items()},
                    'game_version': self.shape['game_version'], 'target_language': 'Português (Brasil)',
                    'toolchain_sha256': sha(canonical((self.root / WORK / 'toolchain.json').read_bytes()))}
@@ -375,8 +411,10 @@ class Project:
                 files[rel] = digest(p)
         require(files == receipt['output'] and set(files) == {PLUGIN, DELTA}, 'Output inventory/hash mismatch')
         hashes = {name: m['source_hashes']['TextAsset/' + name + '.json'] for name in self.shape['tables']}
+        ui = self.ui_records()
+        require(receipt.get('ui_sha256', sha(encoded([]))) == sha(encoded(ui)), 'Stale UI manifest')
         require(digest(output_root / PLUGIN) == digest(self.root / WORK / 'runtime/CultivationPtBr.dll')
-                and (output_root / DELTA).read_bytes() == encoded(make_delta(records.values(), hashes)),
+                and (output_root / DELTA).read_bytes() == encoded(self.output_delta(records, hashes, ui)),
                 'Output differs from verified plugin or translation delta')
         return receipt
 
@@ -398,6 +436,7 @@ class Project:
         catalog_present = (self.root / MANIFEST).is_file()
         if catalog_present:
             self.workspace()
+        self.ui_records()
         return {'status': 'ok', 'catalog': 'validated' if catalog_present else 'local-import-required', 'target': target, 'architecture': platform.machine(),
                 'python': platform.python_version(), 'dependencies': 'standard-library-only',
                 'fixture_roundtrip': 'passed', 'read_only': True}

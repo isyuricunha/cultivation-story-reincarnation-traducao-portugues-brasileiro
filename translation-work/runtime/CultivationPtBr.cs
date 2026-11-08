@@ -31,6 +31,9 @@ public sealed class CultivationPtBr : BaseUnityPlugin
             var harmony = new Harmony("br.yuricunha.cultivation.ptbr");
             harmony.Patch(AccessTools.PropertyGetter(typeof(TextAsset), "text"),
                 postfix: new HarmonyMethod(typeof(CultivationPtBr), "Localize"));
+            var ui = spec["ui"] as JArray;
+            if (ui != null)
+                InterfacePtBr.Install(harmony, ui, spec["ui_layout"] as JArray);
         }
         catch (Exception error)
         {

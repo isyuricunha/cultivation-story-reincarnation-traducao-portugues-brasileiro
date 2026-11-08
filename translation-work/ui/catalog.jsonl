@@ -1,0 +1,32 @@
+{"PTBR": "Nome", "ZH_CN": "姓名", "component": "tmp", "id": "ui/-2272554767002584171", "mode": "exact", "path": "BSTalentPanel/BackGround/Name/NameTitle"}
+{"PTBR": "Talentos Inatos", "ZH_CN": "伴身天赋", "component": "tmp", "id": "ui/-6157670331685420955", "mode": "exact", "path": "BSTalentPanel/BackGround/Title/BSTalentTxt"}
+{"PTBR": "Redefinir Talentos", "ZH_CN": "重置天赋", "component": "tmp", "id": "ui/-632162191220699670", "mode": "exact", "path": "BSTalentPanel/BackGround/btn_Resetting/ResetTalent"}
+{"PTBR": "Redefinir Talentos", "ZH_CN": "重置天赋", "component": "legacy", "id": "ui/-3077370406214430471", "mode": "exact", "path": "BSTalentPanel/BackGround/btn_Resetting/ResettingTxt"}
+{"PTBR": "Reencarnar", "ZH_CN": "进入轮回", "component": "legacy", "id": "ui/3897817112395350246", "mode": "exact", "path": "BSTalentPanel/BackGround/btn_StartGame/StartGameTxt"}
+{"PTBR": "Reencarnar", "ZH_CN": "进入轮回", "component": "tmp", "id": "ui/-4231860637316996601", "mode": "exact", "path": "BSTalentPanel/BackGround/btn_StartGame/Text (TMP)"}
+{"PTBR": "Raiz Espiritual: ", "ZH_CN": "灵根: ", "component": "tmp", "id": "ui/506313558236542063", "mode": "exact", "path": "BSTalentPanel/BackGround/灵根/LingGenTxt"}
+{"PTBR": "Evento", "ZH_CN": "事件", "component": "legacy", "id": "ui/6201315942729296899", "mode": "exact", "path": "GameEventBtn/img_CardBg/img_GameEventIcon/GameEventTypeBG/txt_GameEventType"}
+{"PTBR": "1 ano", "ZH_CN": "1年", "component": "legacy", "id": "ui/-3737896638715449517/singular", "mode": "exact", "path": "GameEventBtn/img_CardBg/img_GameEventIcon/NeedBG/SpendYearBG/txt_SpendYear"}
+{"PTBR": "{0} anos", "ZH_CN": "{0}年", "component": "legacy", "id": "ui/-3737896638715449517/plural", "mode": "format", "path": "GameEventBtn/img_CardBg/img_GameEventIcon/NeedBG/SpendYearBG/txt_SpendYear"}
+{"PTBR": "Equipamento", "ZH_CN": "装备", "component": "tmp", "id": "ui/-2480084307543336624", "mode": "exact", "path": "GameItemPanel/Background/txt_Equip"}
+{"PTBR": "Artefatos Mágicos", "ZH_CN": "法宝", "component": "tmp", "id": "ui/-8632261498005490865", "mode": "exact", "path": "GameItemPanel/Background/txt_FaBao"}
+{"PTBR": "Constituição", "ZH_CN": "体魄", "component": "tmp", "id": "ui/-8068386034701388519", "mode": "exact", "path": "GamePropertyPanel/PropertyBG/基础属性/体魄/tmptxtName"}
+{"PTBR": "Compreensão", "ZH_CN": "悟性", "component": "tmp", "id": "ui/-1691233760980250620", "mode": "exact", "path": "GamePropertyPanel/PropertyBG/基础属性/悟性/tmptxtName"}
+{"PTBR": "Ataque", "ZH_CN": "攻击", "component": "tmp", "id": "ui/-4229337052123900814", "mode": "exact", "path": "GamePropertyPanel/PropertyBG/基础属性/攻击/tmptxtName"}
+{"PTBR": "Crítico", "ZH_CN": "暴击", "component": "tmp", "id": "ui/-6723260749110259366", "mode": "exact", "path": "GamePropertyPanel/PropertyBG/基础属性/暴击/tmptxtName"}
+{"PTBR": "Dano Crítico", "ZH_CN": "爆伤", "component": "tmp", "id": "ui/5841399007530847747", "mode": "exact", "path": "GamePropertyPanel/PropertyBG/基础属性/爆伤/tmptxtName"}
+{"PTBR": "Velocidade", "ZH_CN": "速度", "component": "tmp", "id": "ui/413426405227692824", "mode": "exact", "path": "GamePropertyPanel/PropertyBG/基础属性/速度/tmptxtName"}
+{"PTBR": "Exp. de Alquimia: {0}", "ZH_CN": "炼丹经验: {0}", "component": "tmp", "id": "ui/1705325395217882266", "mode": "format", "path": "GamePropertyPanel/PropertyBG/炼丹炼器/sld_Alchemy/tmptxt_Alchemy"}
+{"PTBR": "Exp. de Forja: {0}", "ZH_CN": "炼器经验: {0}", "component": "tmp", "id": "ui/9220797918922341521", "mode": "format", "path": "GamePropertyPanel/PropertyBG/炼丹炼器/sld_Refine/tmptxt_Refine"}
+{"PTBR": "Cultivo: {0}", "ZH_CN": "修为: {0}", "component": "tmp", "id": "ui/2141146979591581545", "mode": "format", "path": "GamePropertyPanel/PropertyBG/角色属性/sld_Cultivation/tmptxt_Cultivation"}
+{"PTBR": "Vida: {0}", "ZH_CN": "生命: {0}", "component": "tmp", "id": "ui/-8421201630958236646", "mode": "format", "path": "GamePropertyPanel/PropertyBG/角色属性/sld_Health/tmptxt_Health"}
+{"PTBR": "Poder Espiritual: {0}", "ZH_CN": "灵力: {0}", "component": "tmp", "id": "ui/-5715612374978255452", "mode": "format", "path": "GamePropertyPanel/PropertyBG/角色属性/sld_Magic/tmptxt_Magic"}
+{"PTBR": "Ano", "ZH_CN": "第", "component": "tmp", "id": "ui/1442540391196880628", "mode": "exact", "path": "GamePropertyPanel/年份/TextContent/第"}
+{"PTBR": "Vidas Passadas", "ZH_CN": "前尘旧梦", "component": "tmp", "id": "ui/-7601692228546562860", "mode": "exact", "path": "MainPanel/ButtonGroup/btn_Achieve/tmptxtAchieve"}
+{"PTBR": "Sair do Jogo", "ZH_CN": "退出游戏", "component": "tmp", "id": "ui/-5668606273506958477", "mode": "exact", "path": "MainPanel/ButtonGroup/btn_Quit/tmptxtTeam"}
+{"PTBR": "Reencarnar", "ZH_CN": "重入轮回", "component": "tmp", "id": "ui/534884046542308068", "mode": "exact", "path": "MainPanel/ButtonGroup/btn_Start/tmptxtStart"}
+{"PTBR": "Talentos do Destino", "ZH_CN": "命定天赋", "component": "tmp", "id": "ui/-1097194850753105065", "mode": "exact", "path": "MainPanel/ButtonGroup/btn_Talent/tmptxtTalent"}
+{"PTBR": "Créditos", "ZH_CN": "制作团队", "component": "tmp", "id": "ui/5185868456871583365", "mode": "exact", "path": "MainPanel/ButtonGroup/btn_Team/tmptxtTeam"}
+{"PTBR": "Pasta dos Saves", "ZH_CN": "存档路径", "component": "tmp", "id": "ui/3897925002741943877", "mode": "exact", "path": "MainPanel/ExtraGroup/btn_Folder/tmptxtStart"}
+{"PTBR": "Gerenciar Mods", "ZH_CN": "Mod管理", "component": "tmp", "id": "ui/-7386010871303922712", "mode": "exact", "path": "MainPanel/ExtraGroup/btn_Mod/tmptxtStart"}
+{"PTBR": "Grupo no QQ", "ZH_CN": "加入QQ群", "component": "tmp", "id": "ui/8600657761227952140", "mode": "exact", "path": "MainPanel/ExtraGroup/btn_QQ/tmptxtStart"}

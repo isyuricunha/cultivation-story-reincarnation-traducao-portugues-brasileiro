@@ -44,7 +44,7 @@ Formato: termo chinês, escolha em PT-BR, contexto que justifica a escolha, stat
 - 炼器室 → oficina de artefatos. Provisório.
 - 忘尘丹 → Pílula do Esquecimento: apaga feitiços aprendidos. Aprovado.
 - 诛仙剑 → Espada Zhuxian: transliteração consagrada do artefato clássico. Aprovado.
-- 春秋蝉 → Cicada das Estações: inseto gu ligado ao tempo; o talento 天生道蝉 usa "Cicada do Dao Nata". Aprovado.
+- 春秋蝉 → Cicada das Estações: inseto gu ligado ao tempo; o talento 天生道蝉 usa "Cigarra do Dao". Aprovado.
 - 蛊虫 → inseto gu: prática de insetos espirituais. Aprovado.
 - 灵石 → Pedra Espiritual: moeda. Aprovado.
 - 灵草 → erva espiritual. Aprovado.

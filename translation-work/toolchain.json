@@ -7,10 +7,12 @@
     "translation-work/project.json": "2099f7a59a3a9cc76d553dc66aca7abd12085e37f4ed1858f379562de3d6f922",
     "translation-work/release.py": "ae5f7d4661e4354916e88814c4c050d5573a364c8e36235a34d2dd770aa967e6",
     "translation-work/requirements-import.txt": "74c3045d9810798086113cc4860ed445d15dc789fbd8a9e3ce721d5f34876373",
-    "translation-work/runtime/CultivationPtBr.cs": "2d00d29bee2884aa909e91dc7597eb33728ea66ab6aa69682a4ac332e33145f3",
-    "translation-work/runtime/CultivationPtBr.dll": "3f51c9b1c81a5d8f292b99285d47afd97cd88bb882a0ada879365495049c4cd9",
+    "translation-work/runtime/CultivationPtBr.cs": "eea7343ee59c307eabb207d96af85b0447c9fb3dda118826a4dece399082bba8",
+    "translation-work/runtime/CultivationPtBr.dll": "331a0c5cb1afbea5c83f860f7f94f8227f828609b62b74af31ba92c5779411b2",
+    "translation-work/runtime/InterfacePtBr.cs": "b146267525407d8254b5297b961e373ff5499632c0286acc0c6f04dd272ef989",
     "translation-work/storage.py": "971eb90bd4f3b34793d65fcfe9f47ba097c7ade4e502a8485fb541cb13c77da1",
-    "translation-work/toolkit.py": "5d08df7d16b3b51efc088da3df6a71dca5f3412cccdf0020159172385fc0aca9"
+    "translation-work/toolkit.py": "bdc8637b4a83da6902c8ce11b1d3f72961c7af140eb85567a0310ff4a15c8512",
+    "translation-work/ui/layout.json": "fbe8330ecb5b2d3c68274cfafb2f8d3e47eb9cf894889f66113ddea7a89c4c2d"
   },
   "schema": 1
 }
