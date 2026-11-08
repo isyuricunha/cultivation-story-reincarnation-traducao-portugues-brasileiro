@@ -117,7 +117,12 @@ def notes(repo, tag, receipt, change_text, previous_tag=None):
     body += change_text + '\n'
     body += '## Compatibilidade\n\n'
     body += f'Base das tabelas: **{receipt["game_version"]}**. '
-    body += 'O pacote cobre o catálogo de tabelas. Interface gráfica e outros mods têm cobertura separada.\n\n'
+    body += 'O pacote cobre o catálogo de tabelas. '
+    if receipt.get('ui_record_count'):
+        body += 'Inclui também os rótulos do menu inicial, da criação do personagem e do HUD. '
+    if receipt.get('art_record_count'):
+        body += 'Inclui a arte localizada dessas telas. '
+    body += 'Consulte o guia para o escopo e a compatibilidade.\n\n'
     if previous_tag:
         body += f'[Comparar versões]({url}/compare/{previous_tag}...{tag})\n\n'
     body += f'## Ajuda\n\n[Comunidade Vai Brasil]({DISCORD}) · [Portal de traduções]({PORTAL})\n'

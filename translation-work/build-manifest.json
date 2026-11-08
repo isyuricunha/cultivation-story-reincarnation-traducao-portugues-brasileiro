@@ -1,15 +1,28 @@
 {
+  "art_record_count": 11,
+  "art_sha256": "f504ef600d2a0eb7145a2e42fb256b54e0d24f4af30b849c6facde300fa5e614",
   "game_version": "1.2.1.18.1",
   "generation": "799abcbba3a5c3359e9e2a98b5c33b9d005f7a93d69d6f3f4867d9a3dca87fc3",
   "output": {
-    "BepInEx/plugins/CultivationPtBr/CultivationPtBr.dll": "331a0c5cb1afbea5c83f860f7f94f8227f828609b62b74af31ba92c5779411b2",
-    "BepInEx/plugins/CultivationPtBr/tables.ptbr.json": "44eaadae82717fc8cdb1ed527c16eb9b45f419d3d87597c23a483df2e9f60529"
+    "BepInEx/plugins/CultivationPtBr/CultivationPtBr.dll": "4786e8ab94b99feed1388f0094f73249de7cb286f16b45c6933d3ade3a18a17a",
+    "BepInEx/plugins/CultivationPtBr/art/bag.png": "85eea0b1cc6d4f9bb9d0e457be857c49d5fa0c8ba4b427817421f9a4799ec2b6",
+    "BepInEx/plugins/CultivationPtBr/art/earth.png": "9aac5e9d0085ad712f8a42c10fc31650c04e22a8db36330a5bd7ca2988993be7",
+    "BepInEx/plugins/CultivationPtBr/art/fire.png": "45aae5e54640880896d26bc4f36555c774427baded754cd734e99804dc158b98",
+    "BepInEx/plugins/CultivationPtBr/art/logo.png": "ee33ea8f9f4387034ca80f995dd3fd63235e013b8624d6bd4f82880cd476828d",
+    "BepInEx/plugins/CultivationPtBr/art/metal.png": "c0b92320ab2cb1a9638fcf703d4b50d9daf5d650e87bde8a0994050082a4224a",
+    "BepInEx/plugins/CultivationPtBr/art/settings.png": "32123ad55e02da401bf48b0c031a8c32d916ebfbfe108a95b2a26e68390a7419",
+    "BepInEx/plugins/CultivationPtBr/art/skills.png": "a24f4439784cfe01ec85552b7450e82ffc1c0ab589991ceaa98193129e657a7f",
+    "BepInEx/plugins/CultivationPtBr/art/talent-orange.png": "775c01f441851de9774e96316de2a5359722241c59ae0877ed9de4df1f887106",
+    "BepInEx/plugins/CultivationPtBr/art/talent-red.png": "b0fad372ba3685d357841ccadd3c09ae45f4470a25b7da25d3d376f51f32ec66",
+    "BepInEx/plugins/CultivationPtBr/art/water.png": "39b6ab7f5b0eb769c4079d2657e274852db1825da940470a324f66b2c349b5a2",
+    "BepInEx/plugins/CultivationPtBr/art/wood.png": "842337775d2d6028fc2ad2bab470e42d50a4fad30ebbeb939b01169a00d6f5d3",
+    "BepInEx/plugins/CultivationPtBr/tables.ptbr.json": "85d845e999f1c38e75e0d5dba093905155b643bd04e1b564a25997a7245252ab"
   },
   "record_count": 5695,
   "schema": 1,
   "source_sha256": "5c8514ae016c183ef44faac3db76d4a2d7d1e81843bac129bebe047c3efa2e28",
   "target_language": "Português (Brasil)",
-  "toolchain_sha256": "782f7c22569e1c52f92c481d78bd66b1a3e076353a2032b3620ef01a3c2bd5cc",
+  "toolchain_sha256": "8ad2ea75ea47529982a7cf853acaada238b4e453a0679f4e8a9f1e50c7a89a3c",
   "translation_fingerprint": "6684feebab2ca2229f6264787a1deeda215a45051cbe6c27610a3df04d255d81",
   "ui_record_count": 32,
   "ui_sha256": "ab97038fe23bf6aef80c86eb90ca75011b036e1adc542067be621badb4f449fb"

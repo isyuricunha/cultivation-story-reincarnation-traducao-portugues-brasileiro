@@ -47,7 +47,7 @@ O journal em `translation-work/.state/` protege operações de escrita. Uma apli
 
 ## Saída e releases
 
-O build exige preenchimento de todos os registros do escopo e valida a estrutura do delta. O recibo fica em `translation-work/build-manifest.json`. A publicação usa somente `PTBR/BepInEx/plugins/CultivationPtBr/{CultivationPtBr.dll,tables.ptbr.json}`. O CI usa `verify-output`, gera `PTBR.zip` e publica a partir de `main`, começando em `v1.0.0` e avançando o patch para saída alterada. O changelog compara o catálogo da versão anterior. Alterações apenas nos lotes não disparam publicação. A partir de um pacote válido, baixe o ZIP em Releases e siga o [guia público](../README.md#instalação).
+O build exige preenchimento de todos os registros do escopo e valida a estrutura do delta. O recibo fica em `translation-work/build-manifest.json`. A publicação empacota `PTBR/BepInEx/plugins/CultivationPtBr/`, com a DLL, o delta e a arte localizada. O CI usa `verify-output`, gera `PTBR.zip` e publica a partir de `main`, começando em `v1.0.0` e avançando o patch para saída alterada. O changelog compara o catálogo da versão anterior. Alterações apenas nos lotes não disparam publicação. A partir de um pacote válido, baixe o ZIP em Releases e siga o [guia público](../README.md#instalação).
 
 No Windows, rode `python -B -m unittest discover -s translation-work/tests -v` e `python translation-work/toolkit.py doctor --target host`. Para testar o parser compilado no Windows sem abrir o jogo, rode `pwsh -File translation-work/tests/smoke-runtime.ps1 -GameRoot "CAMINHO"` após importar as tabelas. O cliente de Releases tem testes com servidor HTTP local. A execução real no GitHub e a execução do novo plugin com o catálogo completo no jogo ainda precisam de validação.
 
@@ -55,4 +55,4 @@ A licença pública [CC BY-NC-SA 4.0](../LICENSE) cobre o material autorizado. A
 
 ## Interface
 
-Depois dos lotes das tabelas, complete o campo `PTBR` de `ui/catalog.jsonl`. O comando `status` mostra `ui_pending` e `resume` aponta o próximo ID de interface quando as tabelas estão completas. O build exige ambos os catálogos preenchidos. Veja o [inventário das telas observadas](docs/interface-v1.0.0.md) para os textos, ajustes de layout e sprites pendentes.
+Depois dos lotes das tabelas, complete o campo `PTBR` de `ui/catalog.jsonl`. O comando `status` mostra `ui_pending` e `resume` aponta o próximo ID de interface quando as tabelas estão completas. O build exige ambos os catálogos preenchidos. Veja o [inventário das telas observadas](docs/interface-v1.0.0.md) para os textos, ajustes de layout e sprites localizados.

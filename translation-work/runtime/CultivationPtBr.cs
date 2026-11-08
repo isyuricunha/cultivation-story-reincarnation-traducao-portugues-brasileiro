@@ -23,7 +23,8 @@ public sealed class CultivationPtBr : BaseUnityPlugin
         log = Logger;
         try
         {
-            var path = Path.Combine(Path.GetDirectoryName(typeof(CultivationPtBr).Assembly.Location), "tables.ptbr.json");
+            var folder = Path.GetDirectoryName(typeof(CultivationPtBr).Assembly.Location);
+            var path = Path.Combine(folder, "tables.ptbr.json");
             var spec = Parse(File.ReadAllText(path, Encoding.UTF8));
             if ((int)spec["schema"] != 1)
                 throw new InvalidDataException("Unsupported translation schema");
@@ -34,6 +35,9 @@ public sealed class CultivationPtBr : BaseUnityPlugin
             var ui = spec["ui"] as JArray;
             if (ui != null)
                 InterfacePtBr.Install(harmony, ui, spec["ui_layout"] as JArray);
+            var artwork = spec["ui_art"] as JArray;
+            if (artwork != null)
+                ArtworkPtBr.Install(harmony, log, folder, artwork);
         }
         catch (Exception error)
         {

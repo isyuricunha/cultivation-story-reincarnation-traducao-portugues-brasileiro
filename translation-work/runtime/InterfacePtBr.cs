@@ -31,7 +31,8 @@ internal static class InterfacePtBr
                 Add(row);
 
         var flags = new HarmonyMethod(typeof(InterfacePtBr), "OnEnable");
-        harmony.Patch(AccessTools.DeclaredMethod(typeof(Graphic), "OnEnable"), postfix: flags);
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(TextMeshProUGUI), "OnEnable"), postfix: flags);
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(Text), "OnEnable"), postfix: flags);
         harmony.Patch(AccessTools.PropertySetter(typeof(TMP_Text), "text"),
             prefix: new HarmonyMethod(typeof(InterfacePtBr), "SetText"));
         harmony.Patch(AccessTools.PropertySetter(typeof(Text), "text"),

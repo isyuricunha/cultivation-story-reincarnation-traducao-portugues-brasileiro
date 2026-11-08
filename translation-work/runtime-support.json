@@ -7,6 +7,6 @@
   "schema": 1,
   "toolchain": {
     "path": "translation-work/toolchain.json",
-    "sha256": "782f7c22569e1c52f92c481d78bd66b1a3e076353a2032b3620ef01a3c2bd5cc"
+    "sha256": "8ad2ea75ea47529982a7cf853acaada238b4e453a0679f4e8a9f1e50c7a89a3c"
   }
 }

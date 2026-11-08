@@ -13231,6 +13231,151 @@
       "path": "MainPanel/ExtraGroup/btn_QQ/tmptxtStart"
     }
   ],
+  "ui_art": [
+    {
+      "crop": [
+        31,
+        108,
+        1159,
+        1146
+      ],
+      "file": "bag.png",
+      "height": 130,
+      "sha256": "85eea0b1cc6d4f9bb9d0e457be857c49d5fa0c8ba4b427817421f9a4799ec2b6",
+      "sprite": "主界面_物品_背包按钮",
+      "width": 130
+    },
+    {
+      "crop": [
+        87,
+        78,
+        1065,
+        1094
+      ],
+      "file": "earth.png",
+      "height": 86,
+      "sha256": "9aac5e9d0085ad712f8a42c10fc31650c04e22a8db36330a5bd7ca2988993be7",
+      "sprite": "灵根属性_土",
+      "width": 83
+    },
+    {
+      "crop": [
+        86,
+        92,
+        1071,
+        1096
+      ],
+      "file": "fire.png",
+      "height": 86,
+      "sha256": "45aae5e54640880896d26bc4f36555c774427baded754cd734e99804dc158b98",
+      "sprite": "灵根属性_火",
+      "width": 85
+    },
+    {
+      "crop": [
+        24,
+        181,
+        2094,
+        372
+      ],
+      "file": "logo.png",
+      "height": 720,
+      "sha256": "ee33ea8f9f4387034ca80f995dd3fd63235e013b8624d6bd4f82880cd476828d",
+      "sprite": "首页_Logo",
+      "width": 1280
+    },
+    {
+      "crop": [
+        72,
+        68,
+        1093,
+        1133
+      ],
+      "file": "metal.png",
+      "height": 85,
+      "sha256": "c0b92320ab2cb1a9638fcf703d4b50d9daf5d650e87bde8a0994050082a4224a",
+      "sprite": "灵根属性_金",
+      "width": 83
+    },
+    {
+      "crop": [
+        277,
+        91,
+        994,
+        843
+      ],
+      "file": "settings.png",
+      "height": 84,
+      "sha256": "32123ad55e02da401bf48b0c031a8c32d916ebfbfe108a95b2a26e68390a7419",
+      "sprite": "首页_设置按钮",
+      "width": 130
+    },
+    {
+      "crop": [
+        23,
+        15,
+        1291,
+        1152
+      ],
+      "file": "skills.png",
+      "height": 136,
+      "sha256": "a24f4439784cfe01ec85552b7450e82ffc1c0ab589991ceaa98193129e657a7f",
+      "sprite": "主界面_物品_法术按钮",
+      "width": 154
+    },
+    {
+      "crop": [
+        20,
+        16,
+        2072,
+        719
+      ],
+      "file": "talent-orange.png",
+      "height": 82,
+      "sha256": "775c01f441851de9774e96316de2a5359722241c59ae0877ed9de4df1f887106",
+      "sprite": "伴生天赋_橘",
+      "width": 233
+    },
+    {
+      "crop": [
+        16,
+        24,
+        2065,
+        717
+      ],
+      "file": "talent-red.png",
+      "height": 82,
+      "sha256": "b0fad372ba3685d357841ccadd3c09ae45f4470a25b7da25d3d376f51f32ec66",
+      "sprite": "伴生天赋_红",
+      "width": 233
+    },
+    {
+      "crop": [
+        82,
+        90,
+        1080,
+        1090
+      ],
+      "file": "water.png",
+      "height": 86,
+      "sha256": "39b6ab7f5b0eb769c4079d2657e274852db1825da940470a324f66b2c349b5a2",
+      "sprite": "灵根属性_水",
+      "width": 85
+    },
+    {
+      "crop": [
+        92,
+        94,
+        1060,
+        1076
+      ],
+      "file": "wood.png",
+      "height": 85,
+      "sha256": "842337775d2d6028fc2ad2bab470e42d50a4fad30ebbeb939b01169a00d6f5d3",
+      "sprite": "灵根属性_木",
+      "width": 83
+    }
+  ],
   "ui_layout": [
     {
       "component": "tmp",

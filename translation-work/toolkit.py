@@ -331,21 +331,50 @@ class Project:
                 validate_text(row['ZH_CN'], row['PTBR'])
         return rows
 
-    def output_delta(self, records, hashes, ui):
+    def artwork(self):
+        path = safe(self.root, WORK + 'ui/artwork.json')
+        if not path.exists():
+            return [], {}
+        rows = load(path)
+        require(rows and len({row['sprite'] for row in rows}) == len(rows), 'Invalid sprite inventory')
+        files = {}
+        folder = str(Path(PLUGIN).parent.as_posix()) + '/art/'
+        for row in rows:
+            name = row['file']
+            require(re.fullmatch(r'[a-z0-9-]+\.png', name) and folder + name not in files,
+                    'Invalid or duplicate sprite filename')
+            raw = safe(self.root, WORK + 'ui/art/' + name).read_bytes()
+            require(len(raw) >= 33 and raw.startswith(b'\x89PNG\r\n\x1a\n') and raw[12:16] == b'IHDR'
+                    and raw[25] == 6 and sha(raw) == row['sha256'],
+                    'Invalid RGBA sprite or checksum: ' + name)
+            width = int.from_bytes(raw[16:20], 'big')
+            height = int.from_bytes(raw[20:24], 'big')
+            x, y, w, h = row['crop']
+            require(0 <= x < width and 0 <= y < height and 0 < w <= width - x
+                    and 0 < h <= height - y and row['width'] > 0 and row['height'] > 0,
+                    'Invalid sprite geometry: ' + name)
+            files[folder + name] = raw
+        return rows, files
+
+    def output_delta(self, records, hashes, ui, art):
         delta = make_delta(records.values(), hashes)
         if ui:
             require(all(row['PTBR'] for row in ui), 'Incomplete interface translations')
             delta['ui'] = ui
             delta['ui_layout'] = load(safe(self.root, WORK + 'ui/layout.json'))['rules']
+        if art:
+            delta['ui_art'] = art
         return delta
 
     def status(self):
         m, records, batches, _ = self.workspace()
         ui = self.ui_records()
+        art, _ = self.artwork()
         ui_pending = sum(not row['PTBR'] for row in ui)
         done = sum(bool(r['PTBR']) for r in records.values())
         build = self.root / WORK / 'build-manifest.json'
         stale = (not build.exists() or load(build).get('translation_fingerprint') != self.fingerprint(records)
+                 or load(build).get('art_sha256', sha(encoded([]))) != sha(encoded(art))
                  or load(build).get('ui_sha256', sha(encoded([]))) != sha(encoded(ui))
                  or load(build).get('generation') != m['generation']
                  or load(build).get('toolchain_sha256') != sha(canonical((self.root / WORK / 'toolchain.json').read_bytes())))
@@ -360,20 +389,23 @@ class Project:
                 'storage': self.store.stats()}
 
     def build(self):
+        art, assets = self.artwork()
         expected = self.expectations([WORK + 'build-manifest.json', 'PTBR/' + PLUGIN, 'PTBR/' + DELTA,
-                                      WORK + 'ui/catalog.jsonl', WORK + 'ui/layout.json'])
+                                      WORK + 'ui/catalog.jsonl', WORK + 'ui/layout.json', WORK + 'ui/artwork.json',
+                                      *(WORK + 'ui/art/' + row['file'] for row in art),
+                                      *('PTBR/' + rel for rel in assets)])
         m, records, _, _ = self.workspace()
         pending = sum(not r['PTBR'] for r in records.values())
         require(not pending, f'Build blocked: {pending} entries pending')
         hashes = {name: m['source_hashes']['TextAsset/' + name + '.json'] for name in self.shape['tables']}
         ui = self.ui_records()
-        delta = self.output_delta(records, hashes, ui)
+        delta = self.output_delta(records, hashes, ui, art)
         for name, spec in delta['tables'].items():
             if (self.root / 'EN').exists():
                 raw = safe(self.root, 'EN/TextAsset/' + name + '.json').read_bytes()
                 apply_table(raw, name, spec)
         outputs = {PLUGIN: safe(self.root, WORK + 'runtime/CultivationPtBr.dll').read_bytes(),
-                   DELTA: encoded(delta)}
+                   DELTA: encoded(delta), **assets}
         output_root = self.root / 'PTBR'
         if output_root.exists():
             for p in output_root.rglob('*'):
@@ -383,6 +415,7 @@ class Project:
         receipt = {'schema': 1, 'generation': m['generation'], 'source_sha256': m['source_sha256'],
                    'translation_fingerprint': self.fingerprint(records), 'record_count': len(records),
                    'ui_record_count': len(ui), 'ui_sha256': sha(encoded(ui)),
+                   'art_record_count': len(art), 'art_sha256': sha(encoded(art)),
                    'output': {rel: sha(raw) for rel, raw in outputs.items()},
                    'game_version': self.shape['game_version'], 'target_language': 'Português (Brasil)',
                    'toolchain_sha256': sha(canonical((self.root / WORK / 'toolchain.json').read_bytes()))}
@@ -409,12 +442,15 @@ class Project:
             safe(self.root, 'PTBR/' + rel)
             if p.is_file():
                 files[rel] = digest(p)
-        require(files == receipt['output'] and set(files) == {PLUGIN, DELTA}, 'Output inventory/hash mismatch')
+        art, assets = self.artwork()
+        require(files == receipt['output'] and set(files) == {PLUGIN, DELTA, *assets}, 'Output inventory/hash mismatch')
+        require(receipt.get('art_sha256', sha(encoded([]))) == sha(encoded(art))
+                and all(files[rel] == sha(raw) for rel, raw in assets.items()), 'Stale artwork manifest')
         hashes = {name: m['source_hashes']['TextAsset/' + name + '.json'] for name in self.shape['tables']}
         ui = self.ui_records()
         require(receipt.get('ui_sha256', sha(encoded([]))) == sha(encoded(ui)), 'Stale UI manifest')
         require(digest(output_root / PLUGIN) == digest(self.root / WORK / 'runtime/CultivationPtBr.dll')
-                and (output_root / DELTA).read_bytes() == encoded(self.output_delta(records, hashes, ui)),
+                and (output_root / DELTA).read_bytes() == encoded(self.output_delta(records, hashes, ui, art)),
                 'Output differs from verified plugin or translation delta')
         return receipt
 
@@ -437,6 +473,7 @@ class Project:
         if catalog_present:
             self.workspace()
         self.ui_records()
+        self.artwork()
         return {'status': 'ok', 'catalog': 'validated' if catalog_present else 'local-import-required', 'target': target, 'architecture': platform.machine(),
                 'python': platform.python_version(), 'dependencies': 'standard-library-only',
                 'fixture_roundtrip': 'passed', 'read_only': True}

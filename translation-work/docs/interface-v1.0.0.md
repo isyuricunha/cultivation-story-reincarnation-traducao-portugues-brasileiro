@@ -20,11 +20,14 @@ talentos, o estágio de cultivo e os títulos de alquimia e forja. Os nomes
 continuam vindo das tabelas existentes. Confira em jogo truncamentos, legibilidade
 e alinhamento dos cartões e do HUD após preencher os rótulos.
 
-## Arte pendente
+## Arte localizada
 
-O bundle `ui` contém os sprites `首页_Logo` (logo), `首页_设置按钮`
-(engrenagem com rótulo), `主界面_物品_法术按钮` (livro de técnicas) e
-`主界面_物品_背包按钮` (mochila). Os emblemas dos cinco elementos e a
-caligrafia nas capas dos cartões também precisam de revisão visual. Essa etapa
-precisa de arte localizada e verificação de atlas e transparência antes de
-empacotar as substituições.
+O [manifesto de arte](../ui/artwork.json) mapeia o logo, a engrenagem de opções,
+o livro de feitiços, a bolsa, os cinco emblemas elementais e as capas laranja
+e vermelha observadas no teste. Os emblemas usam pictogramas com as cores
+originais. As demais variantes de capa mantêm a arte original.
+
+O build inclui os PNGs na subpasta `art/` do plugin. A substituição em
+memória confere nome e dimensões do sprite original. O encaixe conserva a
+proporção da arte, o pivô e a escala do sprite. Confira em jogo os ícones,
+a leitura dos nomes longos e os acentos.
